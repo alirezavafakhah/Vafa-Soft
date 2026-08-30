@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سازماندهی پالت رنگ | جزئیات و دانلود</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            if (savedTheme === 'dark' || (!savedTheme && systemTheme === 'dark')) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube"></i>
+                <span>Vafa-Soft</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="index.html#apps">اپلیکیشن‌ها</a></li>
+                <li><a href="index.html#features">ویژگی‌ها</a></li>
+                <li><a href="index.html#about">درباره ما</a></li>
+                <li><a href="index.html#contact">ارتباط با ما</a></li>
+            </ul>
+            <div class="nav-extras">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- App Header -->
+    <header class="app-page-header">
+        <div class="container">
+            <div class="app-header-content">
+                <div class="app-header-info">
+                    <span class="badge">جدید</span>
+                    <h1>سازماندهی پالت رنگ</h1>
+                    <p class="lead">برنامه هوشمند مرتب سازی و سازماندهی پالت فرش های ماشینی، با قابلیت مرتب کردن پالت توسط پروفایل و ادغام رنگ‌های نزدیک بهم.</p>
+                    <div class="app-header-meta">
+                        <span><i class="fas fa-star"></i> ۵.۰ (۱۰۰+ رای)</span>
+                        <span><i class="fas fa-download"></i> ۱,۰۰۰+ دانلود</span>
+                        <span><i class="fas fa-calendar-alt"></i> بروزرسانی: ۱۴۰۳/۱۰/۱۰</span>
+                    </div>
+                    <div class="app-header-actions">
+                        <a href="#download" class="btn btn-primary">
+                            <i class="fas fa-download"></i>
+                            دانلود مستقیم
+                        </a>
+                        <a href="#gallery" class="btn btn-outline">
+                            <i class="fas fa-images"></i>
+                            مشاهده تصاویر
+                        </a>
+                    </div>
+                </div>
+                <div class="app-header-image">
+                    <img src="apps/PalletReorder.jpg" alt="سازماندهی پالت رنگ" class="main-app-img">
+                </div>
+            </div>
+        </div>
+        <div class="header-bg-overlay" style="background-image: url('apps/PalletReorder.jpg');"></div>
+    </header>
+
+    <!-- App Description & Features -->
+    <section class="app-details-section">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-content">
+                    <div class="content-block">
+                        <h2>درباره سازماندهی پالت رنگ</h2>
+                        <p>این نرم‌افزار یک ابزار تخصصی و هوشمند برای مرتب‌سازی و سازماندهی پالت رنگ در فایل‌های نقشه فرش ماشینی است. طراحان فرش می‌توانند با استفاده از این ابزار، فرآیند زمان‌بر مرتب‌سازی رنگ‌ها را به صورت خودکار و با دقت بالا انجام دهند.</p>
+                        <p>از ویژگی‌های مهم این برنامه می‌توان به قابلیت ادغام رنگ‌های مشابه و مرتب‌سازی بر اساس معیارهای مختلف اشاره کرد که باعث بهینه‌سازی نقشه برای بافت می‌شود.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h2>ویژگی‌های کلیدی</h2>
+                        <ul class="feature-list">
+                            <li>
+                                <i class="fas fa-sliders-h"></i>
+                                <div>
+                                    <h3>مرتب‌سازی با پروفایل</h3>
+                                    <p>قابلیت مرتب کردن پالت رنگ‌ها با استفاده از پروفایل‌های از پیش تعریف شده یا سفارشی.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-object-group"></i>
+                                <div>
+                                    <h3>ادغام رنگ‌ها</h3>
+                                    <p>شناسایی و مرج کردن رنگ‌های نزدیک به هم برای کاهش تعداد رنگ‌های اضافی در پالت.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-sort-amount-down"></i>
+                                <div>
+                                    <h3>مرتب‌سازی هوشمند</h3>
+                                    <p>مرتب کردن رنگ‌ها با توجه به درصد رنگ و شدت رنگ به صورت کاملا خودکار.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-file-export"></i>
+                                <div>
+                                    <h3>خروجی استاندارد</h3>
+                                    <p>ذخیره فایل‌ها در دو فرمت bmp و pcx. فرمت pcx کاملا با دستگاه‌های بافت تکسیما سازگار است.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="details-sidebar">
+                    <div class="specs-card">
+                        <h3>مشخصات فنی</h3>
+                        <ul class="specs-list">
+                            <li>
+                                <span>نسخه:</span>
+                                <strong>1.0.0</strong>
+                            </li>
+                            <li>
+                                <span>حجم:</span>
+                                <strong>35 مگابایت</strong>
+                            </li>
+                            <li>
+                                <span>سیستم عامل:</span>
+                                <strong>ویندوز 10/11 (64 بیت)</strong>
+                            </li>
+                            <li>
+                                <span>زبان:</span>
+                                <strong>فارسی، انگلیسی</strong>
+                            </li>
+                            <li>
+                                <span>لایسنس:</span>
+                                <strong>رایگان / تجاری</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>ویدیو معرفی</h2>
+                <p>آشنایی بیشتر با امکانات نرم‌افزار</p>
+            </div>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <!-- Replace 'jNQXAC9IVRw' with your own YouTube Video ID -->
+                    <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>تصاویر محیط برنامه</h2>
+                <p>نگاهی به قابلیت‌ها و رابط کاربری برنامه سازماندهی پالت رنگ</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="apps/PalletReorder-info-1.jpg" alt="نمای کلی برنامه">
+                    <div class="gallery-caption">نمای کلی و مدیریت فایل‌ها</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="apps/PalletReorder-info-2.jpg" alt="تنظیمات پالت">
+                    <div class="gallery-caption">تنظیمات پیشرفته پالت</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="apps/PalletReorder-info-3.jpg" alt="خروجی و گزارش">
+                    <div class="gallery-caption">خروجی و گزارش‌گیری</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="container">
+            <div class="download-box">
+                <h2>آماده شروع هستید؟</h2>
+                <p>همین حالا برنامه سازماندهی پالت رنگ را دانلود کنید و کارایی خود را افزایش دهید.</p>
+                <div class="download-buttons">
+                    <a href="#" class="btn btn-primary btn-lg">
+                        <i class="fab fa-windows"></i>
+                        دانلود نسخه ویندوز (نصاب)
+                    </a>
+                    <a href="#" class="btn btn-outline btn-lg">
+                        <i class="fas fa-file-archive"></i>
+                        دانلود نسخه پرتابل (Zip)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-cube"></i>
+                        <span>Vafa-Soft</span>
+                    </a>
+                    <p>ارائه‌دهنده بهترین نرم‌افزارهای ویندوز</p>
+                </div>
+                <div class="footer-links">
+                    <h4>لینک‌های سریع</h4>
+                    <ul>
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="index.html#apps">اپلیکیشن‌ها</a></li>
+                        <li><a href="index.html#contact">ارتباط با ما</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>اپلیکیشن‌ها</h4>
+                    <ul>
+                        <li><a href="app-naghshsaz.html">نقش ساز پلاس</a></li>
+                        <li><a href="app-pallet-reorder.html">سازماندهی پالت رنگ</a></li>
+                        <li><a href="index.html#app3">مدیریت پسورد</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© ۱۴۰۴ تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <button class="lightbox-btn prev" id="lightbox-prev"><i class="fas fa-chevron-right"></i></button>
+        <button class="lightbox-btn next" id="lightbox-next"><i class="fas fa-chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

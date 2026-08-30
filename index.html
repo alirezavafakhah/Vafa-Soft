@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اپلیکیشن‌های ویندوز | دانلود نرم‌افزار</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            if (savedTheme === 'dark' || (!savedTheme && systemTheme === 'dark')) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-cube"></i>
+                <span>Vafa-Soft</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">خانه</a></li>
+                <li><a href="#apps">اپلیکیشن‌ها</a></li>
+                <li><a href="#about">درباره ما</a></li>
+                <li><a href="#contact">ارتباط با ما</a></li>
+            </ul>
+            <div class="nav-extras">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <header class="hero" id="home">
+        <div class="slider" id="slider">
+            <!-- Slide 1 -->
+            <div class="slide active" data-app="4">
+                <div class="slide-bg" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <div class="slide-text">
+                            <span class="badge">پیشرفته</span>
+                            <h1>تبدیل نقشه و ارسال به دستگاه</h1>
+                            <p>تبدیل فرمت های pcx , bmp , png , gif به فایل قابل بافت در دستگاه ZFD و EP با قابلیت ارسال
+                                مستقیم از طریق شبکه.</p>
+                            <a href="app-zfd-converter.html" class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                جزئیات و دانلود
+                            </a>
+                        </div>
+                        <div class="slide-image">
+                            <img src="apps/ZFD_Converter.jpg" alt="Vafa ZFD/EP Convertor" class="hero-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" data-app="5">
+                <div class="slide-bg" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <div class="slide-text">
+                            <span class="badge">حرفه‌ای</span>
+                            <h1>چیدمان هوشمند فرش</h1>
+                            <p>نرم افزار هوشمند چیدمان فایل های بافت فرش در کنار هم، جهت استفاده در رول بافی و کنار بافی
+                                و حتی پادری بافی.</p>
+                            <a href="app-bmp-creator.html" class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                جزئیات و دانلود
+                            </a>
+                        </div>
+                        <div class="slide-image">
+                            <img src="apps/Bmp-Creator.jpg" alt="Smart Layout Manager" class="hero-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" data-app="2">
+                <div class="slide-bg" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <div class="slide-text">
+                            <span class="badge">جدید</span>
+                            <h1>سازماندهی پالت رنگ</h1>
+                            <p>برنامه هوشمند مرتب سازی و سازماندهی پالت فرش های ماشینی، با قابلیت مرتب کردن پالت توسط
+                                پروفایل</p>
+                            <a href="app-pallet-reorder.html" class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                جزئیات و دانلود
+                            </a>
+                        </div>
+                        <div class="slide-image">
+                            <img src="apps/PalletReorder.jpg" alt="Pallet Reorder" class="hero-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide" data-app="1">
+                <div class="slide-bg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <div class="slide-text">
+                            <span class="badge">جدید</span>
+                            <h1>نقش ساز پلاس</h1>
+                            <p>راهکارهای جهت سرعت بخشیدن به نقش ساز، ایجاد میانبرها، باز کردن نقشه در درون ویندوز و
+                                امکانات بی‌نظیر دیگر.</p>
+                            <a href="app-naghshsaz.html" class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                جزئیات و دانلود
+                            </a>
+                        </div>
+                        <div class="slide-image">
+                            <img src="apps/naghshsaz.jpg" alt="Naghsh Saz" class="hero-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide" data-app="3">
+                <div class="slide-bg" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <div class="slide-text">
+                            <span class="badge">کاربردی</span>
+                            <h1>آنالیز رنگ فرش</h1>
+                            <p>شما میتوانیم با این برنامه کوچک میزان استفاده رنگ و نخ ها را در فرش آنالیز کنید.</p>
+                            <a href="app-color-analyser.html" class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                جزئیات و دانلود
+                            </a>
+                        </div>
+                        <div class="slide-image">
+                            <img src="apps/ColorAnalyser.jpg" alt="Color Analyser" class="hero-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button class="slider-btn prev" id="prev-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="slider-dots" id="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
+            </div>
+            <button class="slider-btn next" id="next-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Apps Section -->
+    <section class="apps-section" id="apps">
+        <div class="container">
+            <div class="section-header">
+                <h2>اپلیکیشن‌های ما</h2>
+                <p>مجموعه‌ای از بهترین نرم‌افزارهای ویندوز برای نیازهای روزمره شما</p>
+            </div>
+
+            <div class="apps-grid">
+                <!-- App 4 -->
+                <div class="app-card" id="app4">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <img src="apps/ZFD_Converter.jpg" alt="Vafa ZFD/EP Convertor"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    </div>
+                    <div class="app-info">
+                        <h3>مبدل ZFD/EP</h3>
+                        <p>تبدیل هوشمند فایل‌های گرافیکی به فرمت بافت، ارسال شبکه بدون توقف دستگاه و مدیریت فایل‌ها.</p>
+                        <div class="app-meta">
+                            <span><i class="fas fa-windows"></i> Windows 10/11</span>
+                            <span><i class="fas fa-hdd"></i> 60 MB</span>
+                        </div>
+                        <div class="app-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    <a href="app-zfd-converter.html" class="btn btn-download">
+                        <i class="fas fa-download"></i>
+                        مشاهده و دانلود
+                    </a>
+                </div>
+
+                <!-- App 5 -->
+                <div class="app-card" id="app5">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <img src="apps/Bmp-Creator.jpg" alt="Smart Layout Manager"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    </div>
+                    <div class="app-info">
+                        <h3>چیدمان هوشمند فرش</h3>
+                        <p>چیدمان هوشمند فایل‌ها، ترکیب رنگ‌ها، تعریف پروفایل شانه و تراکم برای مختصات دقیق متری.</p>
+                        <div class="app-meta">
+                            <span><i class="fas fa-windows"></i> Windows 10/11</span>
+                            <span><i class="fas fa-hdd"></i> 45 MB</span>
+                        </div>
+                        <div class="app-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    <a href="app-bmp-creator.html" class="btn btn-download">
+                        <i class="fas fa-download"></i>
+                        مشاهده و دانلود
+                    </a>
+                </div>
+
+                <!-- App 2 -->
+                <div class="app-card" id="app2">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <img src="apps/PalletReorder.jpg" alt="Pallet Reorder"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    </div>
+                    <div class="app-info">
+                        <h3>سازماندهی پالت رنگ</h3>
+                        <p>برنامه هوشمند مرتب سازی و سازماندهی پالت فرش های ماشینی، با قابلیت مرتب کردن پالت توسط
+                            پروفایل و ادغام رنگ‌های نزدیک بهم.</p>
+                        <div class="app-meta">
+                            <span><i class="fas fa-windows"></i> Windows 10/11</span>
+                            <span><i class="fas fa-hdd"></i> 35 MB</span>
+                        </div>
+                        <div class="app-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    <a href="app-pallet-reorder.html" class="btn btn-download">
+                        <i class="fas fa-download"></i>
+                        مشاهده و دانلود
+                    </a>
+                </div>
+
+                <!-- App 1 -->
+                <div class="app-card" id="app1">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <img src="apps/naghshsaz.jpg" alt="Naghsh Saz"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    </div>
+                    <div class="app-info">
+                        <h3>نقش ساز پلاس</h3>
+                        <p>راهکارهای جهت سرعت بخشیدن به نقش ساز، ایجاد میانبرها، باز کردن نقشه در درون ویندوز.</p>
+
+
+                        <div class="app-meta">
+                            <span><i class="fas fa-windows"></i> Windows 10/11</span>
+                            <span><i class="fas fa-hdd"></i> 45 MB</span>
+                        </div>
+                        <div class="app-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <a href="app-naghshsaz.html" class="btn btn-download">
+                        <i class="fas fa-download"></i>
+                        مشاهده و دانلود
+                    </a>
+                </div>
+
+                <!-- App 3 -->
+                <div class="app-card" id="app3">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <img src="apps/ColorAnalyser.jpg" alt="Color Analyser"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    </div>
+                    <div class="app-info">
+                        <h3>آنالیز رنگ فرش</h3>
+                        <p>شما میتوانید با این برنامه کوچک میزان استفاده رنگ و نخ ها را در فرش آنالیز کنید. ابزاری دقیق
+                            برای محاسبه مصرف مواد اولیه.</p>
+                        <div class="app-meta">
+                            <span><i class="fas fa-windows"></i> Windows 10/11</span>
+                            <span><i class="fas fa-hdd"></i> 15 MB</span>
+                        </div>
+                        <div class="app-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                    <a href="app-color-analyser.html" class="btn btn-download">
+                        <i class="fas fa-download"></i>
+                        مشاهده و دانلود
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>درباره من</h2>
+                    <p>درود بر شما. من، علیرضا وفاخواه، دانش آموخته کارشناسی نرم افزار و فعال در حوزه IT و تولید نرم
+                        افزارها در پلتفرم ویندوز، مفتخرم محصولاتی که تولید کردم را در خدمت شما سروران گرامی ارائه دهم.
+                        به امید اینکه برایتان مفید واقع شود و خوشحال میشوم از من حمایت کنید.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">۵+</span>
+                            <span class="stat-label">اپلیکیشن</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">۱۰K+</span>
+                            <span class="stat-label">دانلود</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">۹۸٪</span>
+                            <span class="stat-label">رضایت</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>ارتباط با ما</h2>
+                <p>سوالی دارید؟ با ما در تماس باشید</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>ایمیل</h4>
+                            <p>AVF69Programmer@Gmail.Com</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/989132772836" target="_blank" class="contact-item"
+                        style="text-decoration: none; color: inherit;">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>واتس‌اپ</h4>
+                            <p style="direction: ltr; text-align: right;">+98 913 277 2836</p>
+                        </div>
+                    </a>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>آدرس</h4>
+                            <p>ایران بزرگ ، کاشان</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="نام شما" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="ایمیل شما" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="_subject" placeholder="موضوع">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="پیام شما" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        ارسال پیام
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fas fa-cube"></i>
+                        <span>Vafa-Soft</span>
+                    </a>
+                    <p>ارائه‌دهنده بهترین نرم‌افزارهای ویندوز</p>
+                </div>
+                <div class="footer-links">
+                    <h4>لینک‌های سریع</h4>
+                    <ul>
+                        <li><a href="#home">خانه</a></li>
+                        <li><a href="#apps">اپلیکیشن‌ها</a></li>
+                        <li><a href="#contact">ارتباط با ما</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>اپلیکیشن‌ها</h4>
+                    <ul>
+                        <li><a href="app-zfd-converter.html">مبدل ZFD/EP</a></li>
+                        <li><a href="app-bmp-creator.html">چیدمان هوشمند</a></li>
+                        <li><a href="app-pallet-reorder.html">سازماندهی پالت رنگ</a></li>
+                        <li><a href="app-naghshsaz.html">نقش ساز پلاس</a></li>
+                        <li><a href="app-color-analyser.html">آنالیز رنگ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© ۱۴۰۴ تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
