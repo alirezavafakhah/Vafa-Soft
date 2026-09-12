@@ -21,18 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
         startSlider();
         updateSlideTextColor(0);
 
-        // Make slides clickable
+        // Ensure empty slide areas do NOT navigate. Only the download button and hero image navigate.
         slides.forEach(slide => {
-            slide.style.cursor = 'pointer';
-            slide.addEventListener('click', (e) => {
-                // If the user clicked on a button or link inside the slide, let that handle the navigation
-                if (e.target.closest('a') || e.target.closest('button')) return;
-
-                const link = slide.querySelector('.btn-primary');
-                if (link && link.href) {
+            slide.style.cursor = 'default';
+            const heroImg = slide.querySelector('.hero-img');
+            const link = slide.querySelector('.btn-primary');
+            if (heroImg && link && link.href) {
+                heroImg.style.cursor = 'pointer';
+                heroImg.addEventListener('click', (e) => {
+                    // If image is already wrapped in an anchor tag, browser handles navigation natively
+                    if (heroImg.closest('a')) return;
                     window.location.href = link.href;
-                }
-            });
+                });
+            }
         });
     }
     initScrollEffects();
@@ -94,13 +95,21 @@ function updateSlideTextColor(index) {
 
 // ===== Slider Functions =====
 function startSlider() {
-    if (!slider) return;
-    stopSlider(); // Ensure no other interval is running
+    if (!slider || slides.length <= 1) return;
+    stopSlider(); // Ensure no duplicate intervals exist
     slideInterval = setInterval(nextSlide, slideDelay);
 }
 
 function stopSlider() {
-    clearInterval(slideInterval);
+    if (slideInterval) {
+        clearInterval(slideInterval);
+        slideInterval = null;
+    }
+}
+
+function resetSliderTimer() {
+    stopSlider();
+    startSlider();
 }
 
 function goToSlide(index) {
@@ -128,36 +137,36 @@ function prevSlide() {
 // Slider Controls
 if (nextBtn) {
     nextBtn.addEventListener('click', () => {
-        stopSlider();
         nextSlide();
-        startSlider();
+        resetSliderTimer();
     });
 }
 
 if (prevBtn) {
     prevBtn.addEventListener('click', () => {
-        stopSlider();
         prevSlide();
-        startSlider();
+        resetSliderTimer();
     });
 }
 
 if (dots) {
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            stopSlider();
             goToSlide(index);
-            startSlider();
+            resetSliderTimer();
         });
     });
 }
 
-// Pause slider on hover
-if (slider) {
-    slider.addEventListener('mouseenter', stopSlider);
-    slider.addEventListener('mouseleave', startSlider);
+// Pause slider only when interacting with slider navigation controls
+const sliderControls = document.querySelector('.slider-controls');
+if (sliderControls) {
+    sliderControls.addEventListener('mouseenter', stopSlider);
+    sliderControls.addEventListener('mouseleave', startSlider);
+}
 
-    // Touch support for slider
+// Touch support for slider
+if (slider) {
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -171,7 +180,24 @@ if (slider) {
         handleSwipe();
         startSlider();
     }, { passive: true });
+
+    slider.addEventListener('touchcancel', () => {
+        startSlider();
+    }, { passive: true });
 }
+
+// Ensure slider keeps running when tab/window gains focus or becomes visible
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        stopSlider();
+    } else {
+        startSlider();
+    }
+});
+
+window.addEventListener('focus', () => {
+    startSlider();
+});
 
 function handleSwipe() {
     const swipeThreshold = 50;
@@ -443,14 +469,15 @@ document.head.appendChild(animationStyles);
 
 // ===== Keyboard Navigation =====
 document.addEventListener('keydown', (e) => {
+    // Ignore slider keys if lightbox is open
+    if (lightbox && lightbox.classList.contains('active')) return;
+
     if (e.key === 'ArrowLeft') {
-        stopSlider();
         nextSlide();
-        startSlider();
+        resetSliderTimer();
     } else if (e.key === 'ArrowRight') {
-        stopSlider();
         prevSlide();
-        startSlider();
+        resetSliderTimer();
     }
 });
 

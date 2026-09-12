@@ -184,6 +184,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.8s ease, visibility 0.8s ease;
+    cursor: default;
 }
 
 .slide.active {
@@ -217,6 +218,7 @@ body {
 .slide-text {
     flex: 1;
     color: var(--white);
+    user-select: text;
 }
 
 .badge {
@@ -256,6 +258,18 @@ body {
     animation: float 3s ease-in-out infinite;
 }
 
+.hero-img-link {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.hero-img-link:hover .hero-img {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
 .hero-img {
     max-width: 100%;
     height: auto;
@@ -264,6 +278,7 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     animation: float 3s ease-in-out infinite;
     object-fit: cover;
+    cursor: pointer;
 }
 
 @keyframes float {
