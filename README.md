@@ -1,7 +1,7 @@
-# 🌟 وفا سافت (Vafa-Soft) | وب‌سایت معرفی و دانلود نرم‌افزارهای تخصصی نساجی و ویندوز
+# 🌟 وفا سافت (VafaSoft) | وب‌سایت معرفی و دانلود نرم‌افزارهای تخصصی نساجی و ویندوز
 
 <p align="center">
-  <img src="apps/ZFD_Converter.jpg" alt="Vafa-Soft Banner" width="600" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" />
+  <img src="apps/ZFD_Converter.jpg" alt="VafaSoft Banner" width="600" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" />
 </p>
 
 <p align="center">
@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://alirezavafakhah.github.io/Vafa-Soft/"><img src="https://img.shields.io/badge/Live_Demo-GitHub_Pages-brightgreen?style=for-the-badge&logo=github" alt="Live Demo" /></a>
+  <a href="https://alirezavafakhah.github.io/VafaSoft/"><img src="https://img.shields.io/badge/Live_Demo-GitHub_Pages-brightgreen?style=for-the-badge&logo=github" alt="Live Demo" /></a>
   <img src="https://img.shields.io/badge/Platform-Windows_7%20%7C%2010%20%7C%2011-blue?style=for-the-badge&logo=windows" alt="Platform Windows" />
   <img src="https://img.shields.io/badge/Language-HTML5%20%7C%20CSS3%20%7C%20JS_ES6+-orange?style=for-the-badge&logo=javascript" alt="Tech Stack" />
   <img src="https://img.shields.io/badge/Status-Active%20%26%20Maintained-success?style=for-the-badge" alt="Status" />
@@ -33,7 +33,7 @@
 
 ## 📖 معرفی پروژه
 
-**وفا سافت (Vafa-Soft)** یک پورتال وب مدرن، کاملاً ریسپانسیو و سریع است که با هدف معرفی، ارائه مشخصات فنی، تصاویر محیط نرم‌افزار و لینک‌های دانلود نرم‌افزارهای تخصصی و کاربردی سیستم‌عامل ویندوز (به‌ویژه نرم‌افزارهای صنعت طراحی و بافت فرش ماشینی و نساجی) ایجاد شده است.
+**وفا سافت (VafaSoft)** یک پورتال وب مدرن، کاملاً ریسپانسیو و سریع است که با هدف معرفی، ارائه مشخصات فنی، تصاویر محیط نرم‌افزار و لینک‌های دانلود نرم‌افزارهای تخصصی و کاربردی سیستم‌عامل ویندوز (به‌ویژه نرم‌افزارهای صنعت طراحی و بافت فرش ماشینی و نساجی) ایجاد شده است.
 
 این وب‌سایت بدون وابستگی به فریم‌ورک‌های سنگین و تنها با **Pure HTML5**، **Vanilla CSS3** و **Modern JavaScript (ES6+)** پیاده‌سازی شده و از استانداردهای روز طراحی رابط کاربری (UI/UX)، حالت دوگانه روز/شب (Dark/Light Theme) و پشتیبانی بومی از زبان فارسی (RTL) بهره می‌برد.
 
@@ -124,7 +124,7 @@ WebSite/
 
 1. کل ریپازیتوری را دانلود کرده یا کلون کنید:
    ```bash
-   git clone https://github.com/alirezavafakhah/Vafa-Soft.git
+   git clone https://github.com/alirezavafakhah/VafaSoft.git
    ```
 2. کافیست فایل `index.html` را در هر مرورگر مدرنی (مانند Chrome, Firefox, Edge, Safari) باز کنید.
 3. در صورت تمایل به استفاده از سرور محلی (Local Server) می‌توانید از اکستنشن **Live Server** در VS Code یا دستور پایتون استفاده کنید:
@@ -140,21 +140,21 @@ WebSite/
 
 این پروژه به همراه فایل `.nojekyll` تنظیم شده و آماده استقرار فوری روی **GitHub Pages** می‌باشد:
 
-1. یک ریپازیتوری در گیت‌هاب با نام دلخواه (مثلاً `Vafa-Soft`) بسازید.
+1. یک ریپازیتوری در گیت‌هاب با نام دلخواه (مثلاً `VafaSoft`) بسازید.
 2. کدها را به ریپازیتوری ارسال کنید:
    ```bash
    git init
    git add .
-   git commit -m "Deploy Vafa-Soft Website"
+   git commit -m "Deploy VafaSoft Website"
    git branch -M main
-   git remote add origin https://github.com/alirezavafakhah/Vafa-Soft.git
+   git remote add origin https://github.com/alirezavafakhah/VafaSoft.git
    git push -u origin main
    ```
 3. در گیت‌هاب به بخش **Settings** > **Pages** بروید.
 4. در بخش **Build and deployment**، گزینه **Source** را روی `Deploy from a branch` قرار دهید و شاخه `main` و ریشه `/ (root)` را انتخاب کرده و روی **Save** کلیک کنید.
 5. پس از چند لحظه سایت شما در آدرس زیر آنلاین خواهد بود:
    ```text
-   https://alirezavafakhah.github.io/Vafa-Soft/
+   https://alirezavafakhah.github.io/VafaSoft/
    ```
 
 ---
@@ -206,7 +206,7 @@ fetch('https://formsubmit.co/ajax/YOUR_EMAIL@gmail.com', {
 - 📧 **ایمیل:** [AVF69Programmer@Gmail.Com](mailto:AVF69Programmer@Gmail.Com)
 - 📱 **واتس‌اپ / تلفن همراه:** [`+98 913 277 2836`](https://wa.me/989132772836)
 - 🐙 **گیت‌هاب:** [alirezavafakhah](https://github.com/alirezavafakhah)
-- 🌐 **آدرس وب‌سایت آنلاین:** [alirezavafakhah.github.io/Vafa-Soft](https://alirezavafakhah.github.io/Vafa-Soft/)
+- 🌐 **آدرس وب‌سایت آنلاین:** [alirezavafakhah.github.io/VafaSoft](https://alirezavafakhah.github.io/VafaSoft/)
 
 ---
 
