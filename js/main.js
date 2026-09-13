@@ -158,32 +158,81 @@ if (dots) {
     });
 }
 
-// Pause slider only when interacting with slider navigation controls
+// Pause slider only on desktop devices with true mouse hover (NEVER on touchscreens/mobile)
+const hasHoverSupport = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 const sliderControls = document.querySelector('.slider-controls');
-if (sliderControls) {
+if (hasHoverSupport && sliderControls) {
     sliderControls.addEventListener('mouseenter', stopSlider);
     sliderControls.addEventListener('mouseleave', startSlider);
 }
 
-// Touch support for slider
+// Touch support for slider (optimized for mobile swipe gestures without interfering with vertical scroll)
 if (slider) {
     let touchStartX = 0;
+    let touchStartY = 0;
     let touchEndX = 0;
+    let touchEndY = 0;
+    let isTouchActive = false;
 
     slider.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-        stopSlider();
+        if (!e.touches || e.touches.length !== 1) return;
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchEndX = touchStartX;
+        touchEndY = touchStartY;
+        isTouchActive = true;
     }, { passive: true });
 
-    slider.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-        startSlider();
+    slider.addEventListener('touchmove', (e) => {
+        if (!isTouchActive || !e.touches || e.touches.length !== 1) return;
+        touchEndX = e.touches[0].clientX;
+        touchEndY = e.touches[0].clientY;
+    }, { passive: true });
+
+    slider.addEventListener('touchend', () => {
+        if (!isTouchActive) return;
+        isTouchActive = false;
+
+        const diffX = touchStartX - touchEndX;
+        const diffY = touchStartY - touchEndY;
+        const absDiffX = Math.abs(diffX);
+        const absDiffY = Math.abs(diffY);
+
+        // Only trigger horizontal swipe if horizontal movement is dominant (not a vertical page scroll)
+        if (absDiffX > absDiffY * 1.3 && absDiffX > 40) {
+            // In Persian RTL layout:
+            // Swiping Left (diffX > 0) -> Next slide
+            // Swiping Right (diffX < 0) -> Previous slide
+            if (diffX > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+            resetSliderTimer();
+        } else {
+            // Not a horizontal swipe (just a tap or vertical page scroll) -> ensure slider timer stays active
+            startSlider();
+        }
     }, { passive: true });
 
     slider.addEventListener('touchcancel', () => {
+        isTouchActive = false;
         startSlider();
     }, { passive: true });
+}
+
+// Pause slider when scrolled out of view, resume when visible in viewport
+if ('IntersectionObserver' in window && slider) {
+    const sliderObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startSlider();
+            } else {
+                stopSlider();
+            }
+        });
+    }, { threshold: 0.15 });
+    sliderObserver.observe(slider);
 }
 
 // Ensure slider keeps running when tab/window gains focus or becomes visible
@@ -199,18 +248,9 @@ window.addEventListener('focus', () => {
     startSlider();
 });
 
-function handleSwipe() {
-    const swipeThreshold = 50;
-    const diff = touchStartX - touchEndX;
-
-    if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
-            prevSlide(); // Swipe left - previous (RTL)
-        } else {
-            nextSlide(); // Swipe right - next (RTL)
-        }
-    }
-}
+window.addEventListener('orientationchange', () => {
+    setTimeout(startSlider, 300);
+});
 
 // ===== Scroll Effects =====
 function initScrollEffects() {
